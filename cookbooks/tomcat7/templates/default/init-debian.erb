@@ -26,6 +26,7 @@
 
 set -e
 
+export TARGET_ENV="local"
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:<%= node[:tomcat7][:home] %>/bin
 NAME=tomcat7
 DESC="Tomcat servlet engine"
@@ -58,7 +59,7 @@ TOMCAT7_GROUP=<%= node[:tomcat7][:group] %>
 
 # The first existing directory is used for JAVA_HOME (if JAVA_HOME is not
 # defined in $DEFAULT)
-JDK_DIRS="/usr/lib/jvm/java-6-openjdk /usr/lib/jvm/java-6-sun /usr/lib/jvm/java-1.5.0-sun /usr/lib/j2sdk1.5-sun /usr/lib/j2sdk1.5-ibm"
+JDK_DIRS="/usr/lib/jvm/jdk1.7.0_17"
 
 # Look for the right JVM to use
 for jdir in $JDK_DIRS; do

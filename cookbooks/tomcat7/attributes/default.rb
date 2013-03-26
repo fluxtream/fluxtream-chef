@@ -23,7 +23,7 @@ default[:tomcat7][:target] = "/usr/share"
 default[:tomcat7][:port] = 8080
 default[:tomcat7][:ssl_port] = 8443
 default[:tomcat7][:ajp_port] = 8009
-default[:tomcat7][:java_options] = " -Xmx128M -Dajva.awt.headless=true"
+default[:tomcat7][:java_options] = " -Xmx768M -Dajva.awt.headless=true"
 default[:tomcat7][:use_security_manager] = "no"
 
 ##

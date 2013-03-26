@@ -10,3 +10,8 @@ execute "unzip geoLiteCity" do
 	cwd "/home/fluxtream/projects/fluxtream-app"
 	command "gunzip GeoLiteCity.dat.gz"
 end
+
+file "/home/fluxtream/projects/fluxtream-app/GeoLiteCity.dat" do
+	group "users"
+	mode 00644
+end
