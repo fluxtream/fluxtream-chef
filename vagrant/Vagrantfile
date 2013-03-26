@@ -35,20 +35,20 @@ Vagrant::Config.run do |config|
       }
     };
     chef.log_level = :debug
-    # chef.add_recipe("apt")
-    # chef.add_recipe("git")
-    # chef.add_recipe("java::oracle")
-    # chef.add_recipe("maven")
-    # chef.add_recipe("mysql::server")
-    # chef.add_recipe("tomcat7")
-    # chef.add_recipe("database::mysql")
-    # chef.add_recipe("fluxtream_main::prepare-projects")
-    # chef.add_recipe("fluxtream_main::clone-scribe-java")
-    # chef.add_recipe("fluxtream_main::clone-fluxtream-app")
-    # chef.add_recipe("fluxtream_main::datastore")
-    # chef.add_recipe("fluxtream_main::init-mysql-flx")
+    chef.add_recipe("apt")
+    chef.add_recipe("git")
+    chef.add_recipe("java::oracle")
+    chef.add_recipe("maven")
+    chef.add_recipe("mysql::server")
+    chef.add_recipe("tomcat7")
+    chef.add_recipe("database::mysql")
+    chef.add_recipe("fluxtream_main::prepare-projects")
+    chef.add_recipe("fluxtream_main::clone-scribe-java")
+    chef.add_recipe("fluxtream_main::clone-fluxtream-app")
+    chef.add_recipe("fluxtream_main::datastore")
+    chef.add_recipe("fluxtream_main::init-mysql-flx")
     chef.add_recipe("fluxtream_main::geocity")
-    # chef.add_recipe("fluxtream_main::set-environment-ubuntu")
+    chef.add_recipe("fluxtream_main::set-environment-ubuntu")
   end
 
 end
