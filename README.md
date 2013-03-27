@@ -47,7 +47,7 @@ In `<fluxtream-chef_root>/vagrant`, do
 
 	vagrant up
 	
-Sit back and relax while your virtual machine is being built by vagrant.
+Sit back and relax while your virtual machine is being built by vagrant (~5-10 minutes)
 
 ## Build fluxtream
 
@@ -55,6 +55,8 @@ Sit back and relax while your virtual machine is being built by vagrant.
 	cd <fluxtream-app_root>
 	mvn -DskipTests=true clean install
 	
+The first time you run this, maven will download all required jar dependencies, which will take a while (~10-20 minutes); after that it can take between 10 and 30 seconds. Use JRebel (see below) to avoid recompilation.
+
 ## Start tomcat
 
 Connect to your vm
@@ -71,9 +73,9 @@ Surf to [http://localhost:8282/](http://localhost:8282/)
 
 ## (optional) Make it work with JRebel
 
-Instead of starting tomcat with `/etc/init.d`, do (in your vm's console)
-
 JRebel has to live in your synched folder: `/Users/foo/projects/JRebel/` (this is where the JRebel agent will look for jrebel.jar)
+
+Instead of starting tomcat with `/etc/init.d`, do (in your vm's console)
 
 	sudo su
 	cd /usr/share/tomcat
