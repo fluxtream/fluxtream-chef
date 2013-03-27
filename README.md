@@ -73,6 +73,8 @@ Surf to [http://localhost:8282/](http://localhost:8282/)
 
 Instead of starting tomcat with `/etc/init.d`, do (in your vm's console)
 
+JRebel has to live in your synched folder: `/Users/foo/projects/JRebel/` (this is where the JRebel agent will look for jrebel.jar)
+
 	sudo su
 	cd /usr/share/tomcat
 	bin/catalina-jrebel.sh jpda start
