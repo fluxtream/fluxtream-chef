@@ -35,7 +35,6 @@ user "#{tc7user}" do
     gid "#{tc7group}"
     home "#{tc7target}"
     shell "/bin/false"
-    system true
     action :create
 end
 
@@ -101,8 +100,16 @@ template "#{tc7target}/tomcat/conf/server.xml" do
     mode "0644"
 end
 
-# Start service
-service "tomcat7" do
-    service_name "tomcat7"
-    action :start
+# Add the jrebel script
+template "#{tc7target}/tomcat/bin/catalina-jrebel.sh" do
+    source "catalina-jrebel.sh.erb"
+    owner "#{tc7user}"
+    group "#{tc7group}"
+    mode "0755"
 end
+
+# # Start service
+# service "tomcat7" do
+#     service_name "tomcat7"
+#     action :start
+# end

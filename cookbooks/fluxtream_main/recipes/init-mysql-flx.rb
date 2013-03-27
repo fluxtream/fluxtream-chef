@@ -11,7 +11,7 @@ mysql_database_user 'flx' do
   connection mysql_connection_info
   password 'fluxtream'
   database_name 'flx'
-  host '%'
+  host 'localhost'
   privileges [:all]
   action :grant
 end
