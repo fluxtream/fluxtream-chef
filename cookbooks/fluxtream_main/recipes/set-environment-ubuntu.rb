@@ -7,6 +7,10 @@ ruby_block "set-environment" do
       "TARGET_ENV=\"local\"",
       "TARGET_ENV=\"local\""
     )
+    file.insert_line_if_no_match(
+      "JAVA_HOME=\"/usr/lib/jvm/jdk1\.7\.0_17\"",
+      "JAVA_HOME=\"/usr/lib/jvm/jdk1.7.0_17\""
+    )
     file.write_file
   end
 end
