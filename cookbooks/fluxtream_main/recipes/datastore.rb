@@ -8,7 +8,7 @@ end
 execute "make datastore" do
 	cwd "/home/fluxtream/projects/datastore"
 	user "fluxtream"
-	command "make test"
+	command "make"
 end
 
 directory "/home/fluxtream/db" do
