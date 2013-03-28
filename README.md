@@ -1,3 +1,17 @@
+# Run fluxtream on a production machine
+
+ssh to your brand new machine and do the following:
+
+	sudo apt-get install git
+	git clone https://github.com/fluxtream/fluxtream-chef.git
+	cd fluxtream-chef
+	git checkout chef_solo
+	chmod +x soloconfig.sh
+	./soloconfig.sh
+	sudo chef-solo -N fluxtream_prod -j node.json -c solo.rb
+
+# Create a development environment
+
 ## Requirements
 
 Install java, maven, git on your development machine
@@ -43,7 +57,7 @@ i.e. This example would work if fluxtream-app was checked out under `/Users/foo/
 
 ## Vagrant up
 
-In `<fluxtream-chef_root>/vagrant`, do
+In `<fluxtream-chef_root>/vagrant`, do:
 
 	vagrant up
 	
@@ -59,11 +73,11 @@ The first time you run this, maven will download all required jar dependencies, 
 
 ## Start tomcat
 
-Connect to your vm
+Connect to your vm:
 
 	vagrant ssh
 	
-Start tomcat
+Start tomcat:
 
 	sudo /etc/init.d/tomcat7 start
 
