@@ -8,7 +8,6 @@
     "run_list": [
       "recipe[git]",
       "recipe[java::oracle]",
-      "recipe[maven]",
       "recipe[mysql::server]",
       "recipe[tomcat7]",
       "recipe[database::mysql]",
