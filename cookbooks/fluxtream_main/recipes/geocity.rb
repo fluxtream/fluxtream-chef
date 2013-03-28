@@ -1,5 +1,5 @@
 remote_file "/home/fluxtream/projects/fluxtream-app/GeoLiteCity.dat.gz"  do
-	source "http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz"
+	source "http://fluxtream.org/GeoLiteCity.dat.gz"
 	owner "fluxtream"
 	group "users"
 	action :create_if_missing
