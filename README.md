@@ -1,4 +1,4 @@
-# Run fluxtream on a production machine
+# Build and run fluxtream on a production machine - total time ~45 minutes
 
 ssh to your brand new machine and do the following:
 
@@ -11,7 +11,29 @@ ssh to your brand new machine and do the following:
 	./soloconfig.sh
 	sudo chef-solo -N fluxtream_prod -j node.json -c solo.rb
 
-# Create a development environment
+Count ~10 minutes… Now you are ready to build. First scribe-java:
+
+	sudo su fluxtream
+	cd /home/fluxtream/projects/scribe-java
+	mvn install
+	cd /home/fluxtream/projects/fluxtream-app
+	mvn -DskipTests=true clean install
+	
+Building Fluxtream for the first time is quite a lengthy process as maven needs to (recursively) download all the jar dependencies for the project; count ~15-20 minutes. 
+
+The last step is to edit the property files
+
+	cd /home/fluxtream/projects/fluxtream-app/src/main/resources
+	
+The files to edit are `common.properties`, `local.properties` and `oauth.properties`
+
+Finally , start tomcat:
+
+	/etc/init.d/tomcat7 start
+	
+Head to `http://yourserver:8080/`
+
+# Create a development environment - total time: ~ 1 hour
 
 ## Requirements
 
