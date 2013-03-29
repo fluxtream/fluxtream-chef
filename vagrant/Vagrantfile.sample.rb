@@ -26,8 +26,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  ############################ CHANGE THIS ###################################
-  config.vm.synced_folder "/Users/foo/projects", "/home/work"
+  config.vm.synced_folder "/Users/candide/projects", "/home/work"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -59,7 +58,9 @@ Vagrant.configure("2") do |config|
         :server_repl_password => "fluxtream",
         :server_debian_password => "fluxtream"
       },
-      :jrebel_jar => "/home/work/JRebel/jrebel.jar"
+      :jrebel_jar => "/home/work/JRebel/jrebel.jar",
+      :branch => "idempotent_updates",
+      :ddl_script => "0.9.0010/schema-after-0.9.0010.sql"
     };
     chef.log_level = :debug
     chef.add_recipe("apt")
