@@ -58,7 +58,9 @@ Vagrant.configure("2") do |config|
         :server_repl_password => "fluxtream",
         :server_debian_password => "fluxtream"
       },
-      :jrebel_jar => "/home/work/JRebel/jrebel.jar"
+      :jrebel_jar => "/home/work/JRebel/jrebel.jar",
+      :branch => "idempotent_updates",
+      :ddl_script => "0.9.0010/schema-after-0.9.0010.sql"
     };
     chef.log_level = :debug
     chef.add_recipe("apt")

@@ -2,6 +2,8 @@ mysql_connection_info = {:host => "localhost",
                          :username => 'root',
                          :password => node['mysql']['server_root_password']}
 
+ddl_script = node['ddl_script']
+
 mysql_database 'flx' do
   connection mysql_connection_info
   action :create
@@ -17,8 +19,8 @@ mysql_database_user 'flx' do
 end
 
 execute "execute ddl script" do
-  command "mysql -u root -pfluxtream flx <schema-after-0.9.0010.sql"
-  cwd "/home/fluxtream/projects/fluxtream-app/fluxtream-web/db/0.9.0010"
+  command "mysql -u root -pfluxtream flx <#{ddl_script}""
+  cwd "/home/fluxtream/projects/fluxtream-app/fluxtream-web/db"
   user "fluxtream"
   action :run
 end

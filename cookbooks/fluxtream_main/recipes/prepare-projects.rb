@@ -4,6 +4,7 @@ user "fluxtream" do
   home "/home/fluxtream"
   shell "/bin/bash"
   username "fluxtream"
+  password "fluxtream"
   supports :manage_home => true
   action :create
 end
