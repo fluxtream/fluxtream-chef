@@ -21,6 +21,7 @@
       "recipe[fluxtream_main::datastore]",
       "recipe[fluxtream_main::init-mysql-flx]",
       "recipe[fluxtream_main::geocity]",
-      "recipe[fluxtream_main::set-environment-ubuntu]"
+      "recipe[fluxtream_main::set-environment-ubuntu]",
+      "recipe[fluxtream_main::set-webapp-symlink-prod]")
     ]
 }

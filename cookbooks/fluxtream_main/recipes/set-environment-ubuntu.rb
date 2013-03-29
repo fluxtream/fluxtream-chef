@@ -26,8 +26,3 @@ directory "/usr/share/tomcat/webapps" do
 	mode 00755
 	action :create
 end
-
-link "/usr/share/tomcat/webapps/ROOT" do
-	to "/home/work/fluxtream-app/fluxtream-web/target/ROOT"
-	link_type :symbolic
-end

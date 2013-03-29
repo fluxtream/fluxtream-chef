@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "/Users/candide/projects", "/home/work"
+  config.vm.synced_folder "/Users/foo/projects", "/home/work"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -77,6 +77,7 @@ Vagrant.configure("2") do |config|
     chef.add_recipe("fluxtream_main::init-mysql-flx")
     chef.add_recipe("fluxtream_main::geocity")
     chef.add_recipe("fluxtream_main::set-environment-ubuntu")
+    chef.add_recipe("fluxtream_main::set-webapp-symlink-dev")
   end
 
 end
