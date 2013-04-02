@@ -12,15 +12,15 @@ execute "make datastore" do
 end
 
 directory "/home/fluxtream/db" do
-  owner "fluxtream"
-  group "users"
+  owner "tomcat"
+  group "tomcat"
   mode 00755
   action :create
 end
 
 directory "/home/fluxtream/db/dev.kvs" do
-  owner "fluxtream"
-  group "users"
+  owner "tomcat"
+  group "tomcat"
   mode 00755
   action :create
 end
