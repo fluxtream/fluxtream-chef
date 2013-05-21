@@ -6,7 +6,7 @@
       "server_debian_password" : "fluxtream"
     },
     "branch" : "idempotent_updates",
-    "ddl_script" : "0.9.0010/schema-after-0.9.0010.sql",
+    "ddl_script" : "0.9.0014/schema-after-0.9.0014.sql",
     "run_list": [
       "recipe[git]",
       "recipe[java::oracle]",
