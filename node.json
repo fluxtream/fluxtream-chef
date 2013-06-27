@@ -5,7 +5,7 @@
       "server_repl_password" : "fluxtream",
       "server_debian_password" : "fluxtream"
     },
-    "branch" : "idempotent_updates",
+    "branch" : "master",
     "ddl_script" : "0.9.0014/schema-after-0.9.0014.sql",
     "run_list": [
       "recipe[git]",
@@ -22,6 +22,6 @@
       "recipe[fluxtream_main::init-mysql-flx]",
       "recipe[fluxtream_main::geocity]",
       "recipe[fluxtream_main::set-environment-ubuntu]",
-      "recipe[fluxtream_main::set-webapp-symlink-prod]")
+      "recipe[fluxtream_main::set-webapp-symlink-prod]"
     ]
 }
