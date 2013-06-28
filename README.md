@@ -1,3 +1,5 @@
+# WARNING: THIS IS NOT BEING MAINTAINED ANYMORE, IS UNSAFE AND BUGGY - USE AT YOUR OWN RISK
+
 # Build and run fluxtream on a production machine - total time ~45 minutes
 
 ssh to your brand new machine and do the following:
