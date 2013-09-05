@@ -18,13 +18,6 @@ mysql_database_user 'flx' do
   action :grant
 end
 
-execute "execute ddl script" do
-  command "mysql -u root -pfluxtream flx <#{ddl_script}"
-  cwd "/home/fluxtream/projects/fluxtream-app/fluxtream-web/db"
-  user "fluxtream"
-  action :run
-end
-
 execute "import cities1000" do
   command "mysql -u root -pfluxtream flx <cities1000.sql"
   cwd "/home/fluxtream/projects/fluxtream-app"
