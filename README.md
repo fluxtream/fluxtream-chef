@@ -2,7 +2,7 @@
 
 # Build and run fluxtream on a production machine - total time ~45 minutes
 
-As a prerequisite, please execute the steps described [here](https://help.github.com/articles/generating-ssh-keys) inline link.
+As a prerequisite, please execute the steps described [here](https://help.github.com/articles/generating-ssh-keys)
 
 ssh to your brand new machine and do the following:
 
