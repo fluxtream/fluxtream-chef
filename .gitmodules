@@ -1,0 +1,3 @@
+[submodule "cookbooks/maven"]
+	path = cookbooks/maven
+	url = git@github.com:opscode-cookbooks/maven.git
