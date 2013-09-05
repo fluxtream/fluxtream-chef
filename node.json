@@ -17,7 +17,6 @@
       "recipe[fluxtream_main::prepare-projects]",
       "recipe[fluxtream_main::clone-scribe-java]",
       "recipe[fluxtream_main::clone-fluxtream-app]",
-      "recipe[fluxtream_main::install-maven-dependencies]",
       "recipe[fluxtream_main::datastore]",
       "recipe[fluxtream_main::init-mysql-flx]",
       "recipe[fluxtream_main::geocity]",
