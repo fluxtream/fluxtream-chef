@@ -9,6 +9,8 @@ ssh to your brand new machine and do the following:
 	curl -L http://opscode.com/chef/install.sh | sudo bash
 	git clone https://github.com/fluxtream/fluxtream-chef.git
 	cd fluxtream-chef
+	git submodule init
+	git submodule update
 	chmod +x soloconfig.sh
 	./soloconfig.sh
 	sudo chef-solo -N fluxtream_prod -j node.json -c solo.rb
